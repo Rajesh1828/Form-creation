@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-validation</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <form>
+            <i class="fa-solid fa-paper-plane"></i>
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()"/>
+                <span id="name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Phone No</label>
+                <input type="tel" placeholder="123 456 7890" id="Phone-number" onkeyup="validateNumber()"/>
+                <span id="number-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Email ID</label>
+                <input type="email" placeholder="Enter your Email" id="email-id" onkeyup="validateEmail()"/>
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Write your interest!</label>
+                <textarea rows="5" placeholder="Write here" id="message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>CSE</label>
+                <input type="radio" name="dept" value="CSE"/>
+                <label>IT</label>
+                <input type="radio" name="dept" value="IT"/> 
+                <label>ECE</label>
+                <input type="radio" name="dept" value="ECE"/>
+                <span id="check-error"></span>
+            </div>
+
+            <button type="submit" id="submit-btn">SUBMIT</button>
+            <span id="submit-error"></span>
+        </form>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
